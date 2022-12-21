@@ -5,11 +5,12 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Scanner;
-import java.util.Set;
+
 
 
 public class CheckRunner extends DataBase {
-
+    //при  общем Scanner не считывает следующий элемент
+   //public static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         // write your code here
         Check check = new Check();
@@ -29,7 +30,7 @@ public class CheckRunner extends DataBase {
     private static String readingFile() {
         String Base=null;
         try {
-            Base = Files.readString(Path.of("111.txt"));
+            Base = Files.readString(Path.of("ReadFile.txt"));
         } catch (IOException e) {
             e.printStackTrace();
         }
