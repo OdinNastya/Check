@@ -15,7 +15,6 @@ public class Check extends DataBase {
         String[] words = s.split(" ");
         HashMap<String,Integer> listQt = new HashMap<>();
         HashMap<String,Double> newName = new HashMap<>();
-        SortedSet<String> values = new TreeSet<>(identify.values());
         int SizeName = 0;
         int SizePrice = 0;
         for (String word : words) {
@@ -33,7 +32,7 @@ public class Check extends DataBase {
         }
         title();
         Double Total ;
-        Double Discount = 0.0;
+        Double Discount;
         Double DiscountCount =0.0;
         Double Sum = 0.0;
         ArrayList<String> listWr = new ArrayList<>();
@@ -43,15 +42,15 @@ public class Check extends DataBase {
             Total= pair.getValue() * listQt.get(pair.getKey());
             Sum=Sum+Total;
             if (listQt.get(pair.getKey())>5){
-                listWr.add(String.valueOf(listQt.get(pair.getKey())) + "  " + getSizeStr(pair.getKey(),SizeName)+ " $" + getSizeStr(pair.getValue(),SizePrice)
-                        + " $" + String.valueOf(Total));
+                listWr.add(listQt.get(pair.getKey()) + "  " + getSizeStr(pair.getKey(),SizeName)+ " $" + getSizeStr(pair.getValue(),SizePrice)
+                        + " $" + Total);
                 //доработать с точностью
                 Discount=Total * 0.1;
                 DiscountCount= DiscountCount + Discount ;
                 listWr.add("                               Discount $" + Discount);
             }else {
-                listWr.add(String.valueOf(listQt.get(pair.getKey())) + "  " + getSizeStr(pair.getKey(),SizeName) + " $" + getSizeStr(pair.getValue(),SizePrice)
-                        + " $" + String.valueOf(Total));
+                listWr.add(listQt.get(pair.getKey())+ "  " + getSizeStr(pair.getKey(),SizeName) + " $" + getSizeStr(pair.getValue(),SizePrice)
+                        + " $" + Total);
             }
         }
         listWrTotal.add("=============================================");
@@ -78,12 +77,11 @@ public class Check extends DataBase {
                 writer.write(st + System.lineSeparator());
                 System.out.println(st);
             }
-            writer.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-     static String checkId(String line,boolean value){
+    static String checkId(String line,boolean value){
         String inId;
         if(value){
             System.out.println("Ведите номер товала и его количество через -\nНовое наименование вводится с пробела!");
@@ -107,7 +105,7 @@ public class Check extends DataBase {
         }
         return inId;
     }
-     static boolean card() {
+    static boolean card() {
         Boolean Card = false;
         Scanner sc = new Scanner(System.in);
         int i=0;

@@ -14,7 +14,7 @@ public class CheckRunner extends DataBase {
     public static void main(String[] args) {
         // write your code here
         Check check = new Check();
-        int NumberItem = CheckRunner.vv();
+        int NumberItem = CheckRunner.selectionItem();
         while (NumberItem!= 0) {
             if (NumberItem == 1) {
                 String z = check.checkId(null,true);
@@ -24,7 +24,7 @@ public class CheckRunner extends DataBase {
             }else if (NumberItem == 3){
                 check.checkId(CheckRunner.readingFile(),false);
             }
-            NumberItem = CheckRunner.vv();
+            NumberItem = CheckRunner.selectionItem();
         }
     }
     private static String readingFile() {
@@ -36,7 +36,7 @@ public class CheckRunner extends DataBase {
         }
         return Base;
     }
-    static int vv(){
+    static int selectionItem(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Выберите пункт:\n1. Создать новый чек\n2. Загрузить чек с файла\n" +
                 "3. Загрузить входные данные с файла \n0. Выход");

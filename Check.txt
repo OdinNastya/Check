@@ -1,16 +1,14 @@
             CASH RECEIPT
           SUPERMARKET 123
        12, MILKYNAY Galaxy/ Earth
-                             DATE:19/12/2022
-                               TIME:12:30:56
+                             DATE:21/12/2022
+                               TIME:16:00:37
 QTY DESCRIPTION        PRICE            TOTAL 
-1  Mushrooms           $3.45            $3.45
-7  Flesh               $11.85           $82.95
-                               Discount $8.295
-1  Pineapple           $5.2             $5.2
-8  Eggs                $2.55            $20.4
-                               Discount $2.04
+4  Flesh               $11.85           $47.4
+2  Pasta               $1.65            $3.3
+6  Pineapple           $5.2             $31.200000000000003
+                               Discount $3.1200000000000006
 =============================================
-Taxable Tot.                           $112.0
-Discount                               $10.335
-TOTAL                                  $101.66499999999999
+Taxable Tot.                           $81.9
+Discount                               $3.1200000000000006
+TOTAL                                  $78.78
