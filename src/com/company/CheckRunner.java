@@ -9,8 +9,7 @@ import java.util.Set;
 
 
 public class CheckRunner extends DataBase {
-    //при  общем Scanner не считывает следующий элемент
-   //public static Scanner sc = new Scanner(System.in);
+
     public static void main(String[] args) {
         // write your code here
         Check check = new Check();
