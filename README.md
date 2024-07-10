@@ -27,7 +27,7 @@
     - `CreationCheck.java` - создания чека
     - `CheckReader.java` - утилита для чтения данных из CSV-файлов
     - `CheckSave.java` - утилита для записи чека в CSV-файл  
-    - `src/main/resources` - директория для хранения CSV-файлов
+- `src/main/resources` - директория для хранения CSV-файлов
     - `products.csv` - файл с информацией о продуктах
     - `discountCards.csv` - файл с информацией о дисконтных картах
     - `check.csv` - файл для записи сгенерированного чека
